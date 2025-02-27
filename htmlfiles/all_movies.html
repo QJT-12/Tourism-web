@@ -1,0 +1,6 @@
+{{ all_movies }}
+
+{% for each_movies in all_movies %}
+    <h1>{{each_movies.name}}</h1>
+    <h1>{{each_movies.description}}</h1>
+  {% endfor %}

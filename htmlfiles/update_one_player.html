@@ -1,0 +1,8 @@
+<form method ="post"> 
+    <label>Username</label>
+    <input value="{{single_player.username}}" name="username">
+    <label>Password</label>
+    <input value="{{single_player.password}}" name="password">
+    <button>Save changes</button>
+    {%csrf_token%}
+</form>
