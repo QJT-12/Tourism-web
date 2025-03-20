@@ -7,7 +7,7 @@ from .views import signout
 
 
 urlpatterns = [
-    path("homepage/" , homepage, name="homepage"),
+    path("" , homepage, name="homepage"),
     path("signinpage/" , signinpage, name="signinpage"),
     path("signup/" , signup, name="signup"),
     path("signout/", signout, name="signout")
