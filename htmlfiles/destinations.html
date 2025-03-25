@@ -1,0 +1,56 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya's Top Destinations</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Discover Kenya's Remarkable Destinations</h1>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{% static 'elephants.jpg'%}" class="card-img-top" alt="Maasai Mara">
+                    <div class="card-body">
+                        <h5 class="card-title">Maasai Mara National Reserve</h5>
+                        <p class="card-text">World-famous safari destination known for the Great Wildebeest Migration and incredible wildlife viewing.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{% static 'lions.jpg'%}" class="card-img-top" alt="Mombasa">
+                    <div class="card-body">
+                        <h5 class="card-title">Mombasa</h5>
+                        <p class="card-text">Coastal city with beautiful beaches, historic sites like Fort Jesus, and a vibrant blend of Swahili, Arabic, and African cultures.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{% static 'nairobipark.jpg'%}" class="card-img-top" alt="Mount Kenya">
+                    <div class="card-body">
+                        <h5 class="card-title">Mount Kenya National Park</h5>
+                        <p class="card-text">UNESCO World Heritage site offering mountain climbing, hiking, and unique alpine ecosystems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center my-4">Destination Highlights</h2>
+                <p class="text-center">From wildlife safaris to coastal adventures and mountain expeditions, Kenya offers diverse travel experiences for every explorer.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

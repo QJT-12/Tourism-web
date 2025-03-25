@@ -45,3 +45,7 @@ def signup(request):
 def signout(request):
     logout(request)
     return redirect("signinpage")
+
+
+def destination(request):
+    return render(request, "destinations.html")
