@@ -12,5 +12,5 @@ urlpatterns = [
     path("signinpage/" , signinpage, name="signinpage"),
     path("signup/" , signup, name="signup"),
     path("signout/", signout, name="signout")
-    path("" , destinationspage, name="destinationspage")
+    path("destinations/" , destinations, name="destinationspage")
 ]
