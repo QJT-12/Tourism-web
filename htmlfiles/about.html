@@ -1,0 +1,208 @@
+{%load static%}
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+<head>
+  <title>About Us - Tech Hub Kenya</title>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Stylesheets-->
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
+  <link rel="stylesheet" href="{%static 'Techhubv2/css/bootstrap.css'%}">
+  <link rel="stylesheet" href="{%static 'Techhubv2/css/fonts.css'%}">
+  <link rel="stylesheet" href="{%static 'Techhubv2/css/style.css'%}">
+  <style>
+    :root {
+      --primary-blue: #2E4053;
+      --secondary-blue: #34495E;
+      --accent-blue: #5DADE2;
+      --background-blue: #F0F3F4;
+    }
+
+    body {
+      background-color: var(--background-blue);
+      color: #333;
+    }
+
+    .about-section {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+
+    .about-header {
+      background-color: var(--primary-blue);
+      color: white;
+      padding: 20px;
+      border-radius: 10px 10px 0 0;
+      text-align: center;
+    }
+
+    .team-member {
+      background-color: var(--secondary-blue);
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: scale(1.05);
+    }
+
+    .team-member img {
+      max-width: 200px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .mission-card {
+      background-color: var(--accent-blue);
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!--- <div class="preloader"style display none>
+    <div class="preloader-body">
+      <div class="cssload-container">
+        <div class="cssload-speeding-wheel"></div>
+      </div>
+      <p>Loading...</p>
+    </div>
+  </div>
+-->
+  <div class="page">
+    <header class="section page-header">
+      <!-- Navbar-->
+      <div class="rd-navbar-wrap">
+        <nav class="navbar navbar-expand-sm fixed-top shadow-sm p-3 mb-5 navheader"
+          style="background: linear-gradient(to bottom, #FFFFFF50, #FFFFFF20);">
+          <div class="container">
+            <a class="navbar-brand" href="index.html">
+              <img src="{%static 'Techhubv2/LOGO1.png'%}" style="height:50px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar1">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link font-weight-bold " style="font-size: 16px; color: #410064;" href="#">Tech Hub</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav">
+            xxx       <li class="nav-item active">
+                  <a class="nav-link font-weight-bold " style="font-size: 16px; color: #410064;"
+                    href="#">Destinations</a>
+                </li>cccc
+              </ul>
+              <ul class="nav navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link font-weight-bold " style="font-size: 16px; color: #410064;" href="#">Blog</a>
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <a href="#" class="dropdown-item">Culture</a>
+                    <a href="#" class="dropdown-item">Destinations</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item"></a>
+                  </div>
+                </li>
+              </ul>
+              {%if user.is_authenticated%}
+              <div class="d-flex flex-row bd-highlight mb-3">
+                <p class="navbar-text text-primary ">Welcome {{user.username}}</p>
+                <a class="nav-link font-weight-bold " style="font-size: 16px; color: #410064;"
+                  href="{% url 'Signout' %}">Signout</a>
+              </div>
+              {%else%}
+              <a href="{% url 'signin'%}" class="btn-primary p-2">signin</a>
+              {%endif%}
+            </div>
+          </div>
+      </div>
+      </nav>
+  </div>
+
+    <!-- Main Content -->
+    <div class="container mt-5 pt-5">
+      <div class="about-section">
+        <div class="about-header">
+          <h1>About Tech Hub Kenya</h1>
+        </div>
+        
+        <div class="row mt-4">
+          <div class="col-12">
+            <h2>Our Story</h2>
+            <p>We are a passionate group of students from diverse backgrounds, united by our love for technology and our desire to showcase the beauty and richness of Kenya. Our project is more than just a website—it's a digital platform that bridges technology, culture, and tourism.</p>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <div class="mission-card">
+              <h3>Our Mission</h3>
+              <p>To create an innovative digital space that celebrates Kenya's diverse cultures, breathtaking destinations, and vibrant tourism landscape through cutting-edge web technologies.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mission-card">
+              <h3>Our Vision</h3>
+              <p>Empower travelers and culture enthusiasts with an immersive, informative, and interactive platform that brings Kenya's stories, landscapes, and traditions to life.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mission-card">
+              <h3>Our Approach</h3>
+              <p>Combining our technical skills in web development with a deep appreciation for Kenya's cultural heritage to create a unique and engaging digital experience.</p>
+            </div>
+          </div>
+        </div>
+
+    
+
+        <div class="row mt-4">
+          <div class="col-12">
+            <h2>Our Technologies</h2>
+            <p>We leverage modern web technologies including Django, Bootstrap, and responsive design principles to create a seamless and engaging user experience. Our goal is to showcase Kenya's beauty through innovative digital storytelling.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer from the original template -->
+    <footer>
+      <div class="footer-corporate-bottom-panel">
+        <div class="container">
+          <div class="row justfy-content-xl-space-berween row-10 align-items-md-center2">
+            <div class="col-sm-6 col-md-4 text-sm-right text-md-center">
+              <div>
+                <ul class="list-inline list-inline-sm footer-social-list-2">
+                  <li><a class="icon fa fa-facebook" href="#"></a></li>
+                  <li><a class="icon fa fa-twitter" href="#"></a></li>
+                  <li><a class="icon fa fa-google-plus" href="#"></a></li>
+                  <li><a class="icon fa fa-instagram" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Javascript from the original template -->
+  <script src="{% static 'Techhubv2/js/core.min.js'%}"></script>
+  <script src="{%static 'Techhubv2/js/script.js'%}"></script>
+</body>
+</html>

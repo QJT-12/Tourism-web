@@ -49,3 +49,9 @@ def signout(request):
 
 def destinations(request):
     return render(request, "destinations.html")
+
+def cultures(request):
+    return render(request, "cultures.html")
+
+def about(request):
+    return render(request, "about.html")

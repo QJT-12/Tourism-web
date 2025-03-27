@@ -1,0 +1,203 @@
+{%load static%}
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+<head>
+  <title>Kenya Culture</title>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Stylesheets-->
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
+  <link rel="stylesheet" href="{%static 'Techhubv2/css/bootstrap.css'%}">
+  <link rel="stylesheet" href="{%static 'Techhubv2/css/fonts.css'%}">
+  <link rel="stylesheet" href="{%static 'Techhubv2/css/style.css'%}">
+  <style>
+    /* Custom Green Color Scheme */
+    :root {
+      --primary-green: #2E8B57;
+      --secondary-green: #3CB371;
+      --accent-green: #90EE90;
+      --background-green: #E0F2E0;
+    }
+
+    body {
+      background-color: var(--background-green);
+      color: #333;
+    }
+
+    .culture-section {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+
+    .culture-header {
+      background-color: var(--primary-green);
+      color: white;
+      padding: 20px;
+      border-radius: 10px 10px 0 0;
+      text-align: center;
+    }
+
+    .culture-image {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    .culture-card {
+      background-color: var(--secondary-green);
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .culture-card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+ <body>
+  <!--- <div class="preloader"style display none>
+    <div class="preloader-body">
+      <div class="cssload-container">
+        <div class="cssload-speeding-wheel"></div>
+      </div>
+      <p>Loading...</p>
+    </div>
+  </div>
+-->
+  <div class="page">
+    <header class="section page-header">
+      <!-- Navbar-->
+      <div class="rd-navbar-wrap">
+        <nav class="navbar navbar-expand-sm fixed-top shadow-sm p-3 mb-5 navheader"
+          style="background: linear-gradient(to bottom, #FFFFFF50, #FFFFFF20);">
+          <div class="container">
+            <a class="navbar-brand" href="index.html">
+              <img src="{%static 'Techhubv2/LOGO1.png'%}" style="height:50px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar1">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link font-weight-bold " style="font-size: 16px; color: #410064;" href="#">Tech Hub</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav">
+            xxx       <li class="nav-item active">
+                  <a class="nav-link font-weight-bold " style="font-size: 16px; color: #410064;"
+                    href="#">Destinations</a>
+                </li>cccc
+              </ul>
+              <ul class="nav navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link font-weight-bold " style="font-size: 16px; color: #410064;" href="#">Blog</a>
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <a href="#" class="dropdown-item">Culture</a>
+                    <a href="#" class="dropdown-item">Destinations</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item"></a>
+                  </div>
+                </li>
+              </ul>
+              {%if user.is_authenticated%}
+              <div class="d-flex flex-row bd-highlight mb-3">
+                <p class="navbar-text text-primary ">Welcome {{user.username}}</p>
+                <a class="nav-link font-weight-bold " style="font-size: 16px; color: #410064;"
+                  href="{% url 'Signout' %}">Signout</a>
+              </div>
+              {%else%}
+              <a href="{% url 'signin'%}" class="btn-primary p-2">signin</a>
+              {%endif%}
+            </div>
+          </div>
+      </div>
+      </nav>
+  </div>
+
+    <!-- Main Content -->
+    <div class="container mt-5 pt-5">
+      <div class="culture-section">
+        <div class="culture-header">
+          <h1>Exploring Kenya's Rich Cultural Heritage</h1>
+        </div>
+        
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <img src="{%static 'elephant.jpg'%}" alt="Maasai Warriors" class="culture-image">
+          </div>
+          <div class="col-md-6">
+            <h2>Kenya: A Tapestry of Cultures</h2>
+            <p>Kenya is home to over 40 ethnic groups, each with its unique traditions, languages, and customs. From the iconic Maasai warriors to the coastal Swahili culture, Kenya represents a vibrant mosaic of human diversity.</p>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <div class="culture-card">
+              <h3>Ethnic Diversity</h3>
+              <p>Kenya boasts 42 recognized ethnic communities, including Kikuyu, Luo, Kalenjin, Kamba, and Maasai, each contributing to the nation's cultural richness.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="culture-card">
+              <h3>Traditional Clothing</h3>
+              <p>Traditional attire varies across communities, from the distinctive red shukas of the Maasai to the intricately designed kanga worn by coastal communities.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="culture-card">
+              <h3>Languages</h3>
+              <p>While English and Swahili are official languages, over 60 indigenous languages are spoken, reflecting Kenya's linguistic diversity.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-12">
+            <h2>Cultural Practices</h2>
+            <p>Kenya's cultures are characterized by strong community bonds, respect for elders, and rich oral traditions. Ceremonies like weddings, coming-of-age rituals, and harvest festivals play crucial roles in maintaining social cohesion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer from the original template -->
+    <footer>
+      <div class="footer-corporate-bottom-panel">
+        <div class="container">
+          <div class="row justfy-content-xl-space-berween row-10 align-items-md-center2">
+            <div class="col-sm-6 col-md-4 text-sm-right text-md-center">
+              <div>
+                <ul class="list-inline list-inline-sm footer-social-list-2">
+                  <li><a class="icon fa fa-facebook" href="#"></a></li>
+                  <li><a class="icon fa fa-twitter" href="#"></a></li>
+                  <li><a class="icon fa fa-google-plus" href="#"></a></li>
+                  <li><a class="icon fa fa-instagram" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Javascript from the original template -->
+  <script src="{% static 'Techhubv2/js/core.min.js'%}"></script>
+  <script src="{%static 'Techhubv2/js/script.js'%}"></script>
+</body>
+</html>
